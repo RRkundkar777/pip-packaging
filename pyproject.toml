@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "example_package_rookie_007"
+version = "0.0.1"
+authors = [
+  { name="Rushikesh Kundkar", email="r4002001005025k@gmail.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.5"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/RRkundkar777/femtojarvis"
+"Bug Tracker" = "https://gitlab.com/RRkundkar777/femtojarvis/-/issues"
