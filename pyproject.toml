@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "example_package_rookie_007"
-version = "0.0.1"
+version = "0.0.3"
 authors = [
   { name="Rushikesh Kundkar", email="r4002001005025k@gmail.com" },
 ]
@@ -17,6 +17,22 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+dependencies = [
+  "cryptography",
+  "click>=7, <9, != 8.0.0",
+  "python-dateutil==2.8.*",
+]
+
 [project.urls]
-"Homepage" = "https://gitlab.com/RRkundkar777/femtojarvis"
-"Bug Tracker" = "https://gitlab.com/RRkundkar777/femtojarvis/-/issues"
+"Homepage" = "https://gitlab.com/RRkundkar777/packaging_tutorial"
+"Bug Tracker" = "https://gitlab.com/RRkundkar777/packaging_tutorial/-/issues"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+  "/docs",
+  "copyright.txt",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/example_package_rookie_007"]

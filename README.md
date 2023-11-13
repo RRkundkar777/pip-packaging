@@ -17,4 +17,24 @@ to write your content.
 - [Classifiers: Package metadata](https://pypi.org/classifiers/)
 - [Project metadata](https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata)
 - [Hatch documentation](https://hatch.pypa.io/latest/publish/)
+- [Hatch dependency addition](https://hatch.pypa.io/latest/config/dependency/)
 - [How a package must look like](https://pypi.org/project/pygame/)
+
+
+## Commands to build a distribution
+- Run build
+```shell
+python3 -m build
+```
+- Run publish
+```shell
+python3 -m twine upload --repository testpypi dist/*
+```
+- Download your own package
+```shell
+pip install -i https://test.pypi.org/simple/ example-package-rookie-007==0.0.3
+```
+- Clean the build
+```shell
+rm dist/ -r
+```
